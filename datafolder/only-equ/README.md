@@ -1,13 +1,13 @@
 ## Experiment Overview
 
 
-This experiment used an **incremental distribution** outlined in the study for the following logical operations:
+This experiment used a **EQU-only distribution** outlined in the study for the following logical operations:
 
 **NOT, NAND, AND, OR_N, OR, AND_N, NOR, XOR, EQU**
 
 with corresponding point values:
 
-`2, 2, 4, 4, 8, 8, 16, 16, 32`
+`0, 0, 0, 0, 0, 0, 0, 0, 32`
 
 ### Configuration Details
 - Each trial **started with 10 organisms**  
