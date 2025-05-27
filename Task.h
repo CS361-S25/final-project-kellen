@@ -38,7 +38,7 @@ public:
     double CheckOutput(float output, float inputs[4]) override {
         bool input = toBool(inputs[0]);
         bool result = !input;
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 2.0 : 0.0;
     }
 
     std::string name() const override {
@@ -51,7 +51,7 @@ class NAND : public Task {
 public:
     double CheckOutput(float output, float inputs[4]) override {
         bool result = !(toBool(inputs[0]) && toBool(inputs[1]));
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 2.0 : 0.0;
     }
 
     std::string name() const override {
@@ -64,7 +64,7 @@ class AND : public Task {
 public:
     double CheckOutput(float output, float inputs[4]) override {
         bool result = toBool(inputs[0]) && toBool(inputs[1]);
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 4.0 : 0.0;
     }
 
     std::string name() const override {
@@ -80,7 +80,7 @@ public:
         for (int i = 0; i < 4; ++i) {
             result = result || toBool(inputs[i]);
         }
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 4.0 : 0.0;
     }
 
     std::string name() const override {
@@ -93,7 +93,7 @@ class OR : public Task {
 public:
     double CheckOutput(float output, float inputs[4]) override {
         bool result = toBool(inputs[0]) || toBool(inputs[1]);
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 8.0 : 0.0;
     }
 
     std::string name() const override {
@@ -109,7 +109,7 @@ public:
         for (int i = 0; i < 4; ++i) {
             result = result && toBool(inputs[i]);
         }
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 8.0 : 0.0;
     }
 
     std::string name() const override {

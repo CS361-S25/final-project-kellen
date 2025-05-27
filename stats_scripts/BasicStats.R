@@ -52,13 +52,15 @@ ggplot(data = early, aes(x = update, y = equ_prop, group = Treatment, colour = T
 update_1 <- subset(initial_data, update == 999)
 
 # Bar chart of EQU per rep
-ggplot(data = update_1, aes(x = factor(rep), y = factor(equ_prop), fill = factor(rep))) +
+ggplot(data = update_1, aes(x = factor(rep), y = as.numeric(equ_prop), fill = factor(rep))) +
   geom_col() +
+  scale_y_continuous(breaks = seq(0, 1, by = 0.1), limits = c(0, 1)) +
   scale_fill_manual(values = colors) +
-  labs(x = "Seed", y = "Final Update EQU Proportion", fill = "Seed") +
+  labs(x = "Seed", y = "Final Update EQU Proportion", fill = "Seed", title = "Exponential-Distribution") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   theme_minimal() +
-  theme(legend.position = "none") 
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5))
   
 
 # Boxplot of EQU proportions across replicates
