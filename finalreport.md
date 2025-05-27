@@ -99,16 +99,17 @@ I haven’t done formal statistical analysis yet, so here are visual interpretat
 ### Exponential-Distribution
 - **Average:** 2.5% – 5% of organisms performed EQU in the final update
 - **Min/Max:** 0% – 12.5%
-- **Zero Trials:** 7 out of 50 trials resulted in 0% EQU
+- **Zero Trials:** 7 out of 50 trials resulted in 0% EQU in the final update
 
 ### Only-EQU
 - **Average:** Roughly 25% – 35%
 - **Min/Max:** 0% – ~66.6%
-- **Zero Trials:** 8 out of 50 trials resulted in 0% EQU
+- **Zero Trials:** 8 out of 50
 
 ### Minus-Two
 - **Average:** Around 35%
 - **Min/Max:** ~20% – 47.5%
+- **Zero Trials:** 0 out of 50
 
 ---
 
