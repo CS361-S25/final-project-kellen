@@ -10,7 +10,7 @@ Populations evolved in environments that reward **multiple** logic tasks were mo
 
 ### Experimental Groups
 
-#### 1. Exponential-Distribution
+#### 1. Reward-All
 Organisms were rewarded for completing logic tasks with **exponentially increasing** point values. The original paper does not include results for this group, but we would expect it to produce the **highest proportion of EQU-performing organisms**.
 
 ##### Point Table:
@@ -47,7 +47,7 @@ Only the most complex task, `EQU`, was rewarded. In the original study, **no org
 ---
 
 #### 3. Minus-Two
-Two simpler functions were deliberately not rewarded (the paper does not specify which). I chose to remove rewards for `XOR` and `NOR`, the two most frequently performed tasks in the **Exponential-Distribution** group (excluding `EQU`). In all 10 environments tested in the original study, **at least one organism evolved EQU**.
+Two simpler functions were deliberately not rewarded (the paper does not specify which). I chose to remove rewards for `XOR` and `NOR`, the two most frequently performed tasks in the **Reward-All** group (excluding `EQU`). In all 10 environments tested in the original study, **at least one organism evolved EQU**.
 
 ##### Point Table:
 | Task   | Points |
@@ -96,7 +96,7 @@ All relevant data — raw outputs, munged data, and `.pdf` graphs — are stored
 
 I haven’t done formal statistical analysis yet, so here are visual interpretations from the graphs:
 
-### Exponential-Distribution
+### Reward-All
 - **Average:** 2.5% – 5% of organisms performed EQU in the final update
 - **Min/Max:** 0% – 12.5%
 - **Zero Trials:** 7 out of 50 trials resulted in 0% EQU in the final update
@@ -117,11 +117,11 @@ I haven’t done formal statistical analysis yet, so here are visual interpretat
 
 *Further analysis is still pending, but here are some initial observations:*
 
-- **Seeds 2 and 9** were the only cases where both the **Exponential-Distribution** and **Only-EQU** groups had **0% EQU performance** at the final update. This might suggest either:
+- **Seeds 2 and 9** were the only cases where both the **Reward-All** and **Only-EQU** groups had **0% EQU performance** at the final update. This might suggest either:
   - EQU was **bred out** during evolution in these trials, or
   - EQU **never evolved** in the first place under those conditions.
 
-- The **Exponential-Distribution** group was expected to produce the **most EQU-performing organisms**, given the steep rewards, but it actually produced the **fewest**.
+- The **Reward-All** group was expected to produce the **most EQU-performing organisms**, given the steep rewards, but it actually produced the **fewest**.
 
 - The **Only-EQU** group performed **better than expected** in my trials. While the original study reported **no organisms evolved EQU**, my results show this group had the **highest average percentage** of EQU-performing organisms at the final update. However, it also showed **high variability**, with several trials resulting in **no EQU evolution** at all.
 

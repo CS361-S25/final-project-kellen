@@ -37,8 +37,8 @@ const std::unordered_map<int, std::string> task_colors = {
  */
 class AEAnimator : public emp::web::Animate {
 
-    const int num_h_boxes = 10; ///< Number of height boxes in the grid.
-    const int num_w_boxes = 10; ///< Number of width boxes in the grid.
+    const int num_h_boxes = 30; ///< Number of height boxes in the grid.
+    const int num_w_boxes = 30; ///< Number of width boxes in the grid.
     const double RECT_SIDE = 10; ///< Side length of each rectangle representing an organism.
     const double width{num_w_boxes * RECT_SIDE}; ///< Total width of the canvas.
     const double height{num_h_boxes * RECT_SIDE}; ///< Total height of the canvas.

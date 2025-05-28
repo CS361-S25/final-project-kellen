@@ -45,9 +45,9 @@ int main(int argc, char *argv[]) {
   std::cout << "Random Seed: " << config.SEED() << std::endl;
 
 
-  world.SetPopStruct_Grid(10, 10);
+  world.SetPopStruct_Grid(30, 30);
   // Set the size of the world
-  world.Resize(10,10);
+  world.Resize(30,30);
 
   // Setting up data file
   world.SetupOrgFile(config.FILE_PATH()+"Org_Vals"+std::to_string(config.SEED())+config.FILE_NAME());
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
             world.Inject(*new_org);
         }
 
-  for (int update = 0; update < 1000; update++) {
+  for (int update = 0; update < 10000; update++) {
     world.Update();
     // Print the population size
     //std::cout << "Population size: " << world.GetNumOrgs() << std::endl;
