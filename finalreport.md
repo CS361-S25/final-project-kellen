@@ -86,7 +86,7 @@ My measurement approach also differs:
 - Mutation rate: 0.01  
 - 1000 updates per trial  
 - World size: 100  
-- Each `.data` file number = random seed used
+- Each `.data` file number = seed used
 
 All relevant data — raw outputs, munged data, and `.pdf` graphs — are stored in the `/datafolder`.
 
@@ -94,7 +94,7 @@ All relevant data — raw outputs, munged data, and `.pdf` graphs — are stored
 
 ## Description of Replication Results So Far
 
-I haven’t done formal statistical analysis yet, so here are visual interpretations from the graphs:
+I haven’t done formal statistical analysis yet, so here are visual interpretations from the graphs (should probably do a real one):
 
 ### Reward-All
 - **Average:** 2.5% – 5% of organisms performed EQU in the final update
@@ -130,3 +130,13 @@ I haven’t done formal statistical analysis yet, so here are visual interpretat
 ---
 
 More trials and deeper comparisons (especially mid-run behavior and task acquisition rates) will be necessary to confirm these patterns and understand why my results diverge from the original study.
+
+## Description of Replication (round 2)
+I already said what I did. It didn't change. Let me reread my report and see what I actually have to do.
+
+## Thoughts on the Differences from the Original Results (round ２)
+For most of my trials, at least one organism was able to perform a task on the first update. This was not the case in the original study, so that definitely could have had an impact on the results. 
+
+I also used the same `Instructions.h` file from the DE lab, which my professor mentioned was not 
+
+

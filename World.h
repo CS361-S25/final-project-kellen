@@ -151,7 +151,7 @@ public:
     for (int i : schedule) {
       if (!IsOccupied(i)) continue;
       pop[i]->Process(i);
-      if (pop[i]->GetPoints() > 20) {
+      if (pop[i]->GetPoints() > 32) {
         ReproduceOrg(pop[i]->cpu.state.current_location);
       }
     }

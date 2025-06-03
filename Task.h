@@ -122,7 +122,7 @@ class NOR : public Task {
 public:
     double CheckOutput(float output, float inputs[4]) override {
         bool result = !(toBool(inputs[0]) || toBool(inputs[1]));
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 16.0 : 0.0;
     }
 
     std::string name() const override {
@@ -135,7 +135,7 @@ class XOR : public Task {
 public:
     double CheckOutput(float output, float inputs[4]) override {
         bool result = toBool(inputs[0]) ^ toBool(inputs[1]);
-        return (std::fabs(output - toFloat(result)) < 0.001) ? 0.0 : 0.0;
+        return (std::fabs(output - toFloat(result)) < 0.001) ? 16.0 : 0.0;
     }
 
     std::string name() const override {

@@ -44,7 +44,7 @@ class AEAnimator : public emp::web::Animate {
     const double height{num_h_boxes * RECT_SIDE}; ///< Total height of the canvas.
 
     // ==+++=++++++++++++++++++++++++++++++++++++++++++ ADD config.SEED() +++++++++++++++==//
-    emp::Random random{23904}; ///< Random number generator initialized with the seed.
+    emp::Random random{23904}; /// config_panel.SEED() < Random number generator initialized with the seed.
 
 
 
@@ -77,7 +77,7 @@ public:
                 <div style="margin-top:1em; padding:1em; border:1px solid #ccc; border-radius:8px; max-width:500px;">
                     <h3>Simulation Overview</h3>
                     <p>
-                    Each square represents a digital organism within a 10x10 environment grid. Organisms move and attempt computational tasks. Their color indicates the most recent task they completed successfully:
+                    Each square represents a digital organism within a 30x30 environment grid. Organisms move and attempt computational tasks. Their color indicates the most recent task they completed successfully:
                     </p>
                     <ul>
                     <li><span style='color:gray;'>Gray</span>: No task completed</li>
@@ -119,6 +119,8 @@ public:
         config_panel.SetRange("MUTATION_RATE", "0.01", "0.07");
         config_panel.ExcludeSetting("SEED");
         config_panel.ExcludeSetting("NUM_TASKS");
+        config_panel.ExcludeSetting("FILE_PATH");
+        config_panel.ExcludeSetting("FILE_NAME");
         
 
         settings.SetCSS("max-width", "500px");
