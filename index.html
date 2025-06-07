@@ -16,8 +16,27 @@
 </head>
 
 <body>
-<div id="target"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div id="target"></div>
+      </div>
+      <div class="col">
+        <div style="margin-top:1em; padding:1em; border:1px solid #aaf; border-radius:8px; background-color:#f8fcff; max-width:500px;">
+          <h4>Suggestions to Try</h4>
+          <ul>
+              <li>Start with 10 organisms and a mutation rate of 0.01 for baseline behavior (except this is a 30x30 instead of 10x10).</li>
+              <li>Increase the mutation rate to 0.05 to observe faster adaptation (but also more chaos!).</li>
+          </ul>
+          <p>
+          Remember: results may vary depending on random seed and initial conditions.
+          </p>
+      </div>
+        <div id="settings"></div>
+        <div id="controls" style="margin-top: 1em;"></div>
+      </div>
+    </div>
+  </div>
 </body>
-  
 
 <script type="text/javascript" src="project_web.js"></script>
