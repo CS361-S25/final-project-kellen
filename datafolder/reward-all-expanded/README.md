@@ -1,17 +1,16 @@
 ## Experiment Overview
 
 
-This experiment used an **minus-two** distribution outlined in the study for the following logical operations:
+This experiment used a **reward-all** distribution outlined in the study for the following logical operations:
 
-**NOT, NAND, AND, OR_N, OR, AND_N, NOR, XOR, EQU**
+**NOT, NAND, AND, OR_N, OR, AND_N, NOR, XOR, EQU, COM**
 
 with corresponding point values:
 
-`2, 2, 4, 4, 8, 8, 0, 0, 32`
+`2, 2, 4, 4, 8, 8, 16, 16, 32, 64`
 
 ### Configuration Details
 - Each trial **started with 10 organisms**  
-  _(Note: This should eventually be configurable through the experiment setup)_
 - **Mutation rate:** `0.01`
 - The **number** assigned to each trial corresponds to the **seed value** used for generating that trial’s results.
 
