@@ -11,7 +11,6 @@ with corresponding point values:
 
 ### Configuration Details
 - Each trial **started with 10 organisms**  
-  _(Note: This should eventually be configurable through the experiment setup)_
 - **Mutation rate:** `0.01`
 - The **number** assigned to each trial corresponds to the **seed value** used for generating that trial’s results.
 

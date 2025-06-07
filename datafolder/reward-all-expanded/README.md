@@ -1,4 +1,4 @@
-## Experiment Overview
+## Expanded Experiment Overview
 
 
 This experiment used a **reward-all** distribution outlined in the study for the following logical operations:

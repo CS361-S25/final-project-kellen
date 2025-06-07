@@ -47,6 +47,7 @@ public:
     tasks.push_back(std::make_unique<NOR>());
     tasks.push_back(std::make_unique<XOR>());
     tasks.push_back(std::make_unique<EQU>());
+    tasks.push_back(std::make_unique<COMPLEX>());
   }
 
   /**
@@ -151,7 +152,7 @@ public:
     for (int i : schedule) {
       if (!IsOccupied(i)) continue;
       pop[i]->Process(i);
-      if (pop[i]->GetPoints() > 32) {
+      if (pop[i]->GetPoints() > 20) {
         ReproduceOrg(pop[i]->cpu.state.current_location);
       }
     }

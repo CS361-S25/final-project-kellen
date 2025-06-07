@@ -45,9 +45,9 @@ int main(int argc, char *argv[]) {
   std::cout << "Random Seed: " << config.SEED() << std::endl;
 
 
-  world.SetPopStruct_Grid(30, 30);
+  world.SetPopStruct_Grid(10, 10);
   // Set the size of the world
-  world.Resize(30,30);
+  world.Resize(10,10);
 
   // Setting up data file
   world.SetupOrgFile(config.FILE_PATH()+"Org_Vals"+std::to_string(config.SEED())+config.FILE_NAME());

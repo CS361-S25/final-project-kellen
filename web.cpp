@@ -26,7 +26,7 @@ const std::unordered_map<int, std::string> task_colors = {
   {6, "cyan"},    // Task 6: NOR
   {7, "yellow"},    // Task 7: XOR
   {8, "magenta"},    // Task 8: EQU
-  {9, "gray"}    // Task 9: No task completed
+  {9, "gold"}    // Task 9: COMPLEX
 };
 
 /**
@@ -72,30 +72,32 @@ public:
     void SetupCanvas() {
         doc << canvas;
 
-        // Adds a description of the simluation to the webpage
+        // Adds a description of the simulation to the webpage
         doc << R"(
-                <div style="margin-top:1em; padding:1em; border:1px solid #ccc; border-radius:8px; max-width:500px;">
-                    <h3>Simulation Overview</h3>
-                    <p>
-                    Each square represents a digital organism within a 30x30 environment grid. Organisms move and attempt computational tasks. Their color indicates the most recent task they completed successfully:
-                    </p>
-                    <ul>
-                    <li><span style='color:gray;'>Gray</span>: No task completed</li>
-                    <li><span style='color:blue;'>Blue</span>: NOT</li>
-                    <li><span style='color:green;'>Green</span>: NAND</li>
-                    <li><span style='color:red;'>Red</span>: AND</li>
-                    <li><span style='color:orange;'>Orange</span>: OR_N</li>
-                    <li><span style='color:purple;'>Purple</span>: OR</li>
-                    <li><span style='color:pink;'>Pink</span>: AND_N</li>
-                    <li><span style='color:cyan;'>Cyan</span>: NOR</li>
-                    <li><span style='color:yellow;'>Yellow</span>: XOR</li>
-                    <li><span style='color:magenta;'>Magenta</span>: EQU</li>
-                    </ul>
-                    <p>
-                    You can adjust simulation settings and control execution using the sliders and buttons.
-                    </p>
-                </div>
-                )";
+            <div style="margin-top:1em; padding:1em; border:1px solid #ccc; border-radius:8px; max-width:500px;">
+                <h3>Simulation Overview</h3>
+                <p>
+                Each square represents a digital organism within a 30x30 environment grid. Organisms move and attempt computational tasks. Their color indicates the most recent task they completed successfully:
+                </p>
+                <ul>
+                <li><span style='color:gray;'>Gray</span>: No task completed</li>
+                <li><span style='color:blue;'>Blue</span>: NOT</li>
+                <li><span style='color:green;'>Green</span>: NAND</li>
+                <li><span style='color:red;'>Red</span>: AND</li>
+                <li><span style='color:orange;'>Orange</span>: OR_N</li>
+                <li><span style='color:purple;'>Purple</span>: OR</li>
+                <li><span style='color:pink;'>Pink</span>: AND_N</li>
+                <li><span style='color:cyan;'>Cyan</span>: NOR</li>
+                <li><span style='color:yellow;'>Yellow</span>: XOR</li>
+                <li><span style='color:magenta;'>Magenta</span>: EQU</li>
+                <li><span style='color:gold;'>Gold</span>: COMPLEX</li>
+                </ul>
+                <p>
+                You can adjust simulation settings and control execution using the sliders and buttons.
+                </p>
+            </div>
+
+        )";
     }
 
     /**
@@ -210,6 +212,7 @@ public:
             else if (task_id == 6) color = "cyan";
             else if (task_id == 7) color = "yellow";
             else if (task_id == 8) color = "magenta";
+            else if (task_id == 9) color = "gold";
 
             canvas.Rect(x * RECT_SIDE, y * RECT_SIDE, RECT_SIDE, RECT_SIDE, color, "black");
         } else {

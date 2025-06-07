@@ -26,6 +26,7 @@ initial_data <- read.table("munged_basic.dat", header = TRUE)
 # Add equ_prop and factor Treatment column
 initial_data <- cbind(initial_data,
                       equ_prop = initial_data$EQU / initial_data$total_orgs,
+                      com_prop = initial_data$COMPLEX / initial_data$total_orgs,
                       Treatment = as.factor(initial_data$treatment))
 
 # Subsets
@@ -52,11 +53,11 @@ ggplot(data = early, aes(x = update, y = equ_prop, group = Treatment, colour = T
 update_1 <- subset(initial_data, update == 999)
 
 # Bar chart of EQU per rep
-ggplot(data = update_1, aes(x = factor(rep), y = as.numeric(equ_prop), fill = factor(rep))) +
+ggplot(data = update_1, aes(x = factor(rep), y = as.numeric(com_prop), fill = factor(rep))) +
   geom_col() +
   scale_y_continuous(breaks = seq(0, 1, by = 0.1), limits = c(0, 1)) +
   scale_fill_manual(values = colors) +
-  labs(x = "Seed", y = "Final Update EQU Proportion", fill = "Seed", title = "Exponential-Distribution") +
+  labs(x = "Seed", y = "Final Update COM Proportion", fill = "Seed", title = "Reward-All-Expanded") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   theme_minimal() +
   theme(legend.position = "none") +
